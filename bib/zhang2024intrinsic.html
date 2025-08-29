@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhang2024intrinsic</title>
+    <style>
+        #bib-text pre {
+            font-size: 1em;
+            font-family: 'Consolas', Courier, monospace;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            const el = document.getElementById('bib-text');
+            const range = document.createRange();
+            window.getSelection().removeAllRanges();
+            range.selectNode(el);
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+
+            // Change button text to indicate citation has been copied
+            const copyButton = document.getElementById('copy-button');
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => {
+                copyButton.textContent = 'Copy';
+            }, 2000);  // revert back to "Copy" after 2 seconds
+        }
+    </script>
+</head>
+<body>
+    <div id="bib-text">
+<pre>
+@article{zhang2024intrinsic,
+    author  = {Zhang, Shao-Qun and Chen, Jia-Yi and Wu, Jin-Hui and Zhang, Gao and Xiong, Huan and Gu, Bin and Zhou, Zhi-Hua},
+    title   = {On the Intrinsic Structures of Spiking Neural Networks},
+    journal = {Journal of Machine Learning Research},
+    year    = {2024},
+    volume  = {25},
+    number  = {194},
+    pages   = {1--74}
+}
+</pre>
+    </div>
+    <button id="copy-button" onclick="copyToClipboard()">Copy</button>
+
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wu2023complex</title>
+    <style>
+        #bib-text pre {
+            font-size: 1em;
+            font-family: 'Consolas', Courier, monospace;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            const el = document.getElementById('bib-text');
+            const range = document.createRange();
+            window.getSelection().removeAllRanges();
+            range.selectNode(el);
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+
+            // Change button text to indicate citation has been copied
+            const copyButton = document.getElementById('copy-button');
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => {
+                copyButton.textContent = 'Copy';
+            }, 2000);  // revert back to "Copy" after 2 seconds
+        }
+    </script>
+</head>
+<body>
+    <div id="bib-text">
+<pre>@inproceedings{wu2023complex,
+    title       = {Complex-valued Neurons Can Learn More but Slower than Real-valued Neurons via Gradient Descent},
+    author      = {Wu, Jin-Hui and Zhang, Shao-Qun and Jiang, Yuan and Zhou, Zhi-Hua},
+    booktitle   = {Advances in Neural Information Processing Systems 36},
+    pages       = {23714--23747},
+    year        = {2023}
+}
+</pre>
+    </div>
+    <button id="copy-button" onclick="copyToClipboard()">Copy</button>
+
+</body></html>

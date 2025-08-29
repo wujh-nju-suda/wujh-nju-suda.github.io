@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lyu2024role</title>
+    <style>
+        #bib-text pre {
+            font-size: 1em;
+            font-family: 'Consolas', Courier, monospace;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            const el = document.getElementById('bib-text');
+            const range = document.createRange();
+            window.getSelection().removeAllRanges();
+            range.selectNode(el);
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+
+            // Change button text to indicate citation has been copied
+            const copyButton = document.getElementById('copy-button');
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => {
+                copyButton.textContent = 'Copy';
+            }, 2000);  // revert back to "Copy" after 2 seconds
+        }
+    </script>
+</head>
+<body>
+    <div id="bib-text">
+<pre>@inproceedings{lyu2024role,
+    title       = {The Role of Depth, Width, and Tree Size in Expressiveness of Deep Forest},
+    author      = {Lyu, Shen-Huan and Wu, Jin-Hui and Zheng, Qin-Cheng and Ye, Baoliu},
+    booktitle   = {Proceedings of the 27th European Conference on Artificial Intelligence},
+    pages       = {2042--2049},
+    year        = {2024}
+}
+</pre>
+    </div>
+    <button id="copy-button" onclick="copyToClipboard()">Copy</button>
+
+</body></html>
