@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en" class=" js ">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jin-Hui Wu @ SUDA-CS</title>
+    <meta name="author" content="Jin-Hui Wu">
+
+    <!-- 优化网页在社交媒体平台（如微信、微博、Facebook、Twitter、LinkedIn 等）上被分享时的预览效果 -->
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="Jin-Hui Wu @ SUDA-CS">
+    <meta property="og:title" content="Jin-Hui Wu @ SUDA-CS">
+
+    <!-- 优化网页在移动设备（如手机、平板）上的显示效果 -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 检测浏览器是否支持并启用了 JavaScript，然后动态地修改 <html> 标签的 class 属性，添加一个 js 类（并移除可能存在的 no-js 类） -->
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+
+    <!-- 加载 CSS 样式表文件 -->
+    <link rel="stylesheet" href="../../main.css">
+
+    <!-- 设置间距 -->
+    <style>
+        /* 设置 <li> 下边距 */
+        ul li {
+            margin-bottom: 0px; /* 每个列表项下方留出 20px 空间 */
+        }
+        /* 设置最后一个 <li> 下边距 */
+        ul li:last-child {
+            margin-bottom: 0;
+        }
+        /* 设置 <ul> 的间距 */
+        ul {
+            margin-top: 0px;    /* 与上方段落距离 10px */
+            margin-bottom: 10px; /* 与下方段落距离 30px */
+            /* 或者用简写：margin: 10px 0 30px 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="masthead">
+        <div class="masthead__inner-wrap">
+            <div class="masthead__menu">
+                <nav id="site-nav" class="greedy-nav">
+                    <button class="hidden" count="0">
+                        <div class="navicon"></div>
+                    </button>
+                    <ul class="visible-links">
+                        <li class="masthead__menu-item">
+                            <a href="../../index.html#-home">Home</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="../../index.html#-biography">Biography</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="../../index.html#-publications">Publications</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="../../index.html#-links">Links</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="../../index.html#-correspondence">Correspondence</a>
+                        </li>
+                    </ul>
+                    <ul class="hidden-links hidden"></ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+
+                <h1 id="-courses">Courses</h1>
+
+                <details>
+                    <summary>2025 Fall, Calculus and Linear Algebra</summary>
+                    <ul>
+                        <li>授课对象：2+2国际本科，计算机科学、人工智能方向</li>
+                        <li>学生人数：22</li>
+                        <li>上课时间：2025年秋季学期，12-19周，周一14:00-17:30、周三14:00-17:30</li>
+                        <li>上课地点：苏州大学独墅湖校区，303号楼3405-B</li>
+                        <li>课程资料：[<a href="./math_2+2_2025fall/math_vocab_keynote.pdf" target="_blank">词汇表与知识点</a>]</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>2025 Fall, Discrete Mathematics and Combinatorial Mathematics</summary>
+                    <ul>
+                        <li>授课对象：计算机科学与技术学院，同等学力申硕</li>
+                        <li>学生人数：18</li>
+                        <li>上课时间：2025年秋季学期，7-17单周，周六08:30-12:30、周日08:30-12:30</li>
+                        <li>上课地点：苏州大学天赐庄校区，理工楼316</li>
+                    </ul>
+                </details>
+
+                <br>
+                &nbsp;
+
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
